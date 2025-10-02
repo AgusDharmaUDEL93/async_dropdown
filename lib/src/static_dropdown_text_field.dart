@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 
 import 'dropdown_container_decoration.dart';
 
-
 class StaticDropdownTextField<T> extends StatefulWidget {
   const StaticDropdownTextField({
     super.key,
@@ -26,7 +25,10 @@ class StaticDropdownTextField<T> extends StatefulWidget {
     this.onSetTextFieldPrefix,
 
     // --- TextField params (passthrough, opsional) ---
-    this.decoration = const InputDecoration(),
+    this.decoration = const InputDecoration(
+      border: OutlineInputBorder(),
+      filled: true,
+    ),
     this.focusNode,
     this.undoController,
     this.keyboardType,

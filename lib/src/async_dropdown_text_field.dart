@@ -4,7 +4,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 import 'dropdown_container_decoration.dart';
 
 class AsyncDropdownTextField<T> extends StatefulWidget {
@@ -29,7 +28,10 @@ class AsyncDropdownTextField<T> extends StatefulWidget {
     this.onErrorFetch,
 
     // --- TextField params (passthrough, opsional) ---
-    this.decoration = const InputDecoration(),
+    this.decoration = const InputDecoration(
+      border: OutlineInputBorder(),
+      filled: true,
+    ),
     this.focusNode,
     this.undoController,
     this.keyboardType,
